@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Cartes non triées :</h1>
+    <ul>
+        {% for card in handCards %}
+            <li>{{ card.color }} - {{ card.value }}</li>
+        {% endfor %}
+    </ul>
+    <h1>Algorithme de tri des cartes :</h1>
+    <h3>couleurs :</h3>
+    <ul>
+        {% for color in colors %}
+            <li>{{ color }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>valeurs :</h3>
+    <ul>
+        {% for value in values %}
+            <li>{{ value }}</li>
+        {% endfor %}
+    </ul>
+    <h1>Cartes triées :</h1>
+    <ul>
+        {% for card in sortedHandCards %}
+            <li>{{ card.color }} - {{ card.value }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
